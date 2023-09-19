@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- jsp = java server page
+    spring - legacy, spring- boot -->
+</head>
+<body>
+    <!-- checkBox -->
+    <hr><form>
+        짜장면<input type="checkbox" value="1">
+        짬뽕 <input type="checkbox" value="2" checked>
+        탕수육<input type="checkbox" value="3">
+        <input type="submit" value="완료">
+    </form>
+    <p>
+        <hr>
+        <input type="radio" name="food" id="jajang" value="1"> 짜장면
+        <img src="media/jajang.png" alt="짜장면"><br>
+        <input type="radio" name="food" id="jjambbong" value="2" checked> 짬뽕
+        <img src="media/jjambbong.png" alt="짬뽕"><br>
+        <input type="radio" name="food" id="tangsuyuk" value="3"> 탕수육
+        <img src="media/tangsuyuk.png" alt="탕수육"><br>
+        <input type="submit" value="제출">
+        
+    </p>
+    <hr>
+    <form>
+    <select name="food" id="">
+        <option value="1">짜장</option>
+        <option value="2" selected>짬뽕</option>
+        <option value="3">우동</option>
+    </select>
+</form>
+<hr>
+<form>
+<label for="userId">    사용자 ID : <input type="text" name="userIds" id="userId"></label><br>
+<label for="userPass"> 비밀 번호 : <input type="password" name="userPassS" id="userPass"></label>
+<input type="submit" value="완료">
+</form>
+<!-- 전송 <form action="get", "post"> get 편리하지만 보안에 불리
+    post 복잡하지만 보안에 유리 -->
+<p>
+    <form>
+        <label for="jajang1"><input type="radio" name="food" id="jajang1">짜장면<img src="jajang.png" alt="짜장면"></label>
+        <label for="jjambbong1"><input type="radio" name="food" id="jjambbong1">짬뽕<img src="jjambbong.png" alt="짬뽕"></label>
+        <label for="udong1"><input type="radio" name="food" id="udong1">우동<img src="udong.png" alt="우동"></label>
+    </form>
+</p>
+<form>
+
+    <input type="radio" name="pub" id="pub1" value="1">웹 퍼블리싱 <br>
+    <input type="radio" name="pub" id="dev1" value="2">웹 어플리케이션 개발<br>
+    <input type="radio" name="pub" id="ev1" value="3">개발 환경 개선<br>
+
+</form>
+<form>
+    색 선택 <input type="color" value="#00BFFF" onchange="document.body.style.color=this.value">
+</form>
+<form>
+    <pre>
+        month: <input type="month" value="2023-09"><br>
+        week : <input type="week" value="2023-W03" >
+        
+        date : <input type="date" value="2023-09-19" >
+        time : <input type="time" value="11:58">
+        local : <input type="datetime-local" value="2023-09-19T11:59:21.56">
+
+    </pre>
+</form>
+
+
+    </body>
+</html>

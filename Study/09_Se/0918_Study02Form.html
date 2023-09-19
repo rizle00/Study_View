@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    Q&amp;A리스트
+    <hr>
+    <summary>Question 1</summary>
+    <p>
+    <details>웹 개발자가 알아야 하는 언어 3가지?</details>
+
+    </p>
+    <summary>Answer 1</summary>
+    <p>
+    <details>HTML, CSS, JS</details>
+    </p>
+    <details>
+        <summary>HTML요소</summary>
+        <ol type="a">
+            <li>TAG</li>
+            <li>Structure</li>
+            <li>semantic</li>
+        </ol>
+    </details>
+    <hr>
+    내일 <mark>HMTL5 시험</mark><br>
+    시간은 <time>09:00</time><br>
+    난이도 <meter value="0.8" max="1">80%</meter><br>
+    자료 업로딩(20%) <progress value="0.2" max="1"></progress>
+    <p>
+        <hr>
+    <form name="fo" method="get"> <!-- name은 폼의 구분을 위해서,
+    method 는 전송방식 post, get action 요청에 대한 응답-->
+        <label for="ui">
+            사용자 ID : <input type="text" size="15" name="ui" id="ui"><br>
+        </label>
+        <label for="pass">
+            비밀 번호 : <input type="password" name="pass" id="pass" size="15">
+        </label>
+        <input type="submit" value="완료">
+
+    </form>
+    </p>
+    <hr>
+    이름 : <input type="text" name="name" id="name"><br>
+    암호 : <input type="password" name="pass" id="pass" minlength="4" maxlength="8"><br>
+    자소서 : <textarea name="self" id="self" cols="20" rows="5" value="이곳에 자기소개서 작성"></textarea>
+    <hr>
+    나라 : <input type="text" name="country" list="counties"><br>
+    <datalist id="counties">
+        <option value="japna"></option>
+        <option value="gana"></option>
+        <option value="france"></option>
+    </datalist>
+    먹고싶은것 : <input type="text" name="food" list="foods"><br>
+    <datalist id="foods">
+        <option value="sushi"></option>
+        <option value="wine"></option>
+        <option value="chocolate"></option>
+
+    </datalist>
+    <hr>
+    <form name="fo" method="get">
+        사용자 ID : <input type="text" size="15"><br>
+        비밀 번호 : <input type="password" size="15">
+        <input type="submit" value="완료">
+    </form>
+    <hr>
+    <form name="self">
+        이름 : <input type="text"><br>
+        암호 : <input type="password" maxlength="4"><br>
+        자소서 : <textarea value="이곳에 자기소개서 작성" cols="20" rows="5"></textarea>
+
+
+    </form>
+    <footer>
+        <div class="contaier">
+            <div class="logo">
+                <a href="src">MOZO</a>
+            </div>
+            <div class="menu">
+                <div class="menu-item">cookies</div>
+                <div class="menu-item">cake</div>
+                <div class="menu-item">bread</div>
+                <div class="menu-item">pastry</div>
+            </div>
+            <div class="link"></div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
