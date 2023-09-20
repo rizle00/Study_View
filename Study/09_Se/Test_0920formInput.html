@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container { 
+            width:520px;
+            border:1px solid black;
+            padding:20px 40px;
+            margin:0 auto;
+        }
+  fieldset { margin-bottom:15px; }
+  legend { font-weight:bold; }
+        ul {list-style-type: none;}
+        li { line-height:30px;}
+</style>
+</head>
+<body>
+    <h1>회원 가입을 환영 합니다</h1>
+    <form>
+        <fieldset>
+            <legend>사용자 정보</legend>
+            <ul>
+                <li>아이디 <input type="text" placeholder="4자~10자 사이. 공백없이" autofocus name="userId" id="id1" required></li>
+                <li>이메일 <input type="email" name="userEm" id="em1" required></li>
+                <li>비밀번호 <input type="password" name="userPs" id="ps1" placeholder="문자와 숫자, 특수 기호 포함" required></li>
+                <li>비밀번호 확인 <input type="password" name="psCh" id="psCh1" required></li>
+                <li>가입경로 
+                    <select name="path" id="path1">
+                        <option value="blog">블로그</option>
+                        <option value="search">검색</option>
+                        <option value="sns">SNS</option>
+                        <option value="etc">기타</option>
+                    </select>
+                </li>
+                <li>메모 <textarea name="memo" id="memo1" cols="30" rows="4" placeholder="남길 말씀이 있다면 여기에"></textarea></li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend>이벤트와 새로운 소식</legend>
+            <input type="radio" name="mail" id="mailY">메일 수신
+            <input type="radio" name="mail" id="mailN" checked>메일 수신 안 함
+        </fieldset>
+        <button type="submit">가입하기</button>
+        <button type="reset">취소</button>
+    </form>
+    
+
+
+    <hr>
+    <h2>예약 정보</h2>
+    <form action="">
+<ul>
+    <li>
+        <label for="r-name">이 름</label>
+        <input type="text" name="r-name" id="r-name">
+    </li>
+    <li>
+        <label for="r-phone">전 화</label>
+        <input type="tel" name="r-phone" id="r-phone">
+    </li>
+    <li>
+        <label for="r-mail">이메일</label>
+        <input type="email" name="r-mail" id="r-mail">
+    </li>
+</ul>
+<input type="submit" value="예약하기">
+    </form>
+<div class="container">
+    <p>
+        <h1>프런트엔드 개발자 지원서</h1>
+        HTML, CSS, 자바스크립트의 기술을 이해하고 실무 경험이 있는 분을 찾<br>습니다.
+        <hr>
+    </p>
+    <form action="">
+        <b>개인 정보</b>
+        <ul>
+            <li>
+                <label for="iname">이름</label>
+                <input type="text" id="iname" placeholder="공백 없이 입력하세요" required>
+            </li>
+            <li>
+                <label for="itel">연락처</label>
+                <input type="tel" name="itel" id="itel" required>
+            </li>
+        </ul><br>
+        <b>지원 분야</b>
+        <ul>
+            <li><input type="radio" name="part" id="pub">웹 퍼블리싱</li>
+            <li><input type="radio" name="part" id="dev">웹 애플리케이션 개발 </li>
+            <li><input type="radio" name="part" id="env">개발 환경 개선</li>
+        </ul><br>
+        <label for="rea"><b>지원 동기</b> </label><br><br>
+        <textarea name="rea" id="rea" cols="60" rows="5" placeholder="본사 지원 동기를 간략히 써 주세요."></textarea><br>
+        <input type="submit" value="접수하기">
+        <input type="reset" value="다시하기">
+        
+    </form>
+</div>
+</body>
+</html>

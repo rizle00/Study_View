@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>
+            <label><input type="checkbox" value="g_3">선물용 3kg</label>
+            <input type="number" min="0" max="5">개 (최대 5개)
+        </li>
+        <li>
+            <label><input type="checkbox" value="g_5">선물용 5kg</label>
+            <input type="number" min="0" max="3">개 (최대 3개)
+        </li>
+    </ul>
+    <ul>
+        <li>
+            <label><input type="checkbox" value="h_3">가정용 3kg</label>
+            <input type="range" min="0" max="5">개 (최대 5개)
+        </li>
+        <li>
+            <label><input type="checkbox" value="h_5">가정용 5kg</label>
+            <input type="range" min="0" max="3" list="number">개 (최대 3개)
+            <datalist id="number">
+                <option value="1"></option>
+                <option value="2"></option>
+                <option value="3"></option>
+            </datalist>
+        </li>
+    </ul>
+    <h1>날짜 지정하기</h1>
+    <input type="date" >
+    <input type="month" >
+    <input type="week" >
+    <hr>
+    <input type="time">
+    <input type="datetime-local">
+    <hr>
+    <input type="date" min="2020-02-01" max="2020-02-15">
+    <hr>
+    <select>
+        <option value="g_3" selected>선물용 3kg</option>
+        <option value="g-5">선물용 5kg</option>
+        <option value="h_3">가정용 3kg</option>
+        <option value="h_5">가정용 5kg</option>
+    </select>
+    <input type="text" list="dateid">
+    <datalist id="dateid">
+        <option value="서버로 넘길값">선택옵션</option>
+    </datalist>
+
+</body>
+</html>
