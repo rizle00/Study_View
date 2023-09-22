@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            font: normal 24px verdana;
+        }
+        .dropText{
+            text-shadow: 3px 3px;
+        }
+        .redText{
+            text-shadow: 3px 3px red;
+        }
+        .blurText{
+            text-shadow: 3px 3px 5px skyblue;
+        }
+        .glowEffect{
+            text-shadow: 0px 0px 3px red;
+        }
+        .wordArtEffect{
+            color:white;
+            text-shadow: 0px 0px 3px darkblue;
+        }
+        .threeDEffect{
+            color:wheat;
+            text-shadow: 2px 2px 4px black;
+        }
+        .multiEffect{
+            color:yellow;
+            text-shadow: 2px 2px 2px black,
+                        0 0 25px blue,
+                        0 0 5px darkblue;
+        }
+       body {background: ghostwhite;
+       }
+       span{background: deepskyblue;}
+       div.box{
+        background: yellow;
+        border-color: peru;
+        border-style: solid;
+
+        margin: 40px;
+        border-width: 30px;
+        padding: 20px;
+       }
+       div.inner {
+        background: yellow;
+        padding: 20px;
+        border: 5px dotted red;
+        margin: 30px;
+       }
+      
+       p{
+        background: #90d000;
+        padding: 10px;
+        width: 200px; height: 60px;
+        border:20px solid lightgray;
+       }
+       #round1 {border-radius: 50px; color: red; }
+       #round2 {border-radius: 0px 20px 40px 60px;}
+       #round3 {border-radius: 0px 20px 40px }
+       #round4 {border-radius: 0px 20px }
+       #round5 {border-radius: 50px;
+    border-style: dotted;}
+    .p2{
+        background: yellow;
+        width: 200px; height: 60px; padding: 10px;
+        border: 20px solid lightgray;
+    }
+    
+    #round {border-image: url("media/border.png") 30 round;}
+    #repeat {border-image: url("media/border.png") 30 repeat;}
+    #stretch {border-image: url("media/border.png") 30 stretch;}
+       
+    </style>
+</head>
+<body>
+    <div class="box">
+        <span>DivDIvDiv</span>
+    </div>
+    <div class="inner">
+        <img src="media/min.png" alt="고양이눈">
+    </div>
+    <p style="border:3px solid blue"> 3픽셀 solid</p>
+    <p style="border:3px none blue"> 3픽셀 none</p>
+    <p style="border:3px hidden blue"> 3픽셀 hidden</p>
+    <p style="border:3px dotted blue"> 3픽셀 dotted</p>
+    <p style="border:3px dashed blue"> 3픽셀 dashed solid</p>
+    <p style="border:3px double blue"> 3픽셀 double</p>
+    <p style="border: 15px groove yellow"> 15px groove</p>
+    <p style="border: 15px ridge yellow"> 15px ridge</p>
+    <p style="border: 15px inset yellow"> 15px inset</p>
+    <p style="border: 15px outset yellow"> 15px outset</p>
+    <p id="round1">반지름 50 픽셀의 둥근 모서리</p>
+    <p id="round2">반지름 0,20,40,60 둥근 모서리</p>
+    <p id="round3">반지름 0,20,40,20 둥근 모서리</p>
+    <p id="round4">반지름 0,20,0,20 둥근 모서리</p>
+    <p id="round5">반지름 50의 둥근 점선 모서리</p>
+    <p class="p2">20x20 크기의 회색 태두리</p>
+    <p id="round">round 스타일 이미지 테두리</p>
+    <p id="repeat">repeat 스타일 이미지 테두리</p>
+    <p id="stretch"> stretch</p>
+    <div class="dropText">Drop Shadow</div>
+    <div class="redText">Color Shadow</div>
+    <div class="blurText">blur Shadow</div>
+    <div class="glowEffect">glowEffect</div>
+    <div class="wordArtEffect">wordArtEffect    </div>
+    <div class="threeDEffect">3D Effect</div>
+    <div class="multiEffect">Multiple shadow Effect</div>
+</body>
+</html>
