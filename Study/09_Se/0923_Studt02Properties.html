@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: 2px solid yellowgreen;
+            color: blue;
+            background: aliceblue;
+        }
+        span{
+            border: 3px dotted red;
+            background: yellow;
+
+        }
+        div.relative{
+            display: inline-block;
+            height: 50px;
+            width: 50px;
+            border: 1px solid lightgray;
+            text-align: center;
+            color: white;
+            background: red;
+        }
+            #down:hover{
+            position:relative;
+            left: 20px;
+            top: 20px;
+            background: green;
+            }
+             #up:hover{
+            position: relative;
+            right: 20px;
+            bottom: 20px;
+            background: green;
+            }
+        div.absolute{
+            display: inline-block;
+            position:absolute;
+            border: 1px solid lightgray;
+        }
+        div.absolute > p{
+            display: inline-block;
+            position: absolute;
+            height: 20px;
+            width: 15px;
+            background: lightgray;
+
+        }
+        #fixed{
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            width: 100px;
+            padding: 5px;
+            background: red;
+            color: white;
+        }
+        #float{
+            float:right;
+            border : 1px dotted black;
+            width: 7em;
+            padding : 0.25em;
+            margin : 1em;
+        }
+        div.ab{
+            position: absolute;
+        }
+        img{
+            position: absolute;
+        }
+        #spadeA {z-index: -3; left: 10px; top: 20px;}
+        #spade2 {z-index: 2; left: 40px; top: 30px;}
+        #spade3 {z-index: 3; left: 80px; top: 40px;}
+        #spade7 {z-index: 7; left: 120px; top: 50px;}
+    </style>
+</head>
+<body>
+    <h3>인라인, 인라인 블록, 블록</h3>
+    <hr>
+    나는 <div style="display:none ;"> div(none)</div>입니다
+    나는 <div style="display:inline ;">div(inline)</div>
+    나는 <div style="display:inline-block; height: 50px ;">div(inline-block)</div>
+    나는 <div>div<span style="display:block ;">div(block)</span></div>
+    <div class="relative">T</div>
+    <div class="relative" id="down">h</div>
+    <div class="relative">a</div>
+    <div class="relative">n</div>
+    <div class="relative" id="up">k</div>
+    <div class="relative">s</div>
+    <div class="absolute">
+        <img src="media/chrismastree.png" width="200" height="200" alt="크리스마스트리">
+        <p style="left: 50px; top: 30px;">M</p>
+        <p style="left: 100px; top: 0px;">E</p>
+        <p style="left: 100px; top: 80px;">R</p>
+        <p style="left: 150px; top: 110px;">R</p>
+        <p style="left: 30px; top: 130px;">Y</p>
+    </div>
+    <hr>
+    <img src="media/chrismastree.png" width="300" height="300" alt="zmfltmaktmxmfl">
+    <div id="fixed">예수님이 탄생하셨습니다.</div>
+<div>
+    <P id="float">
+        24일은 피아니스트 조성진의 크리스마스 특별 연주가 있습니다.
+    </P>
+    <p>이제 곧 겨울방학이 시작됩니다.</p>
+    <div class="ab">
+        <img src="media/spade-A" width="100" height="140" alt="스페이드A" id="spadeA">
+        <img src="media/spade-2" width="100" height="140" alt="스페이드2" id="spade2">
+        <img src="media/spade-3" width="100" height="140" alt="스페이드3" id="spade3">
+        <img src="media/spade-7" width="100" height="140" alt="스페이드7" id="spade7">
+    </div>
+    <hr>
+    <p>
+    <ul style="position: absolute; bottom: 10; left: 10;"   >
+        <li>I (<span style="visibility: hidden;">Love</span>) you</li>
+        <li>CSS is Cascading(<span style="visibility: hidden;">Style</span>)Sheet</li>
+        <li>응답하라(<span style="visibility: collapse">1988</span></li>
+    </ul>
+</p>
+</div>
+</body>
+</html>
