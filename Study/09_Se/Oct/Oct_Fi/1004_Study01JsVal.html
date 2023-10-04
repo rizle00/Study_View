@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="javascript:alert('클릭하셨어요?')">
+        클릭해보세요
+    </a><br>
+    <script>
+        let x; // 전역 변수 x 선언. var로 선언해도 동일
+        //var 의 단점 보완
+        function f(){ // 호출 후 기능
+            let y; // 함수 f() 내에서만 사용되는 지역 변수 y 선언. var로 선언해도 동일
+            x=10;
+            y=20;
+            z=30; // 새로운 전역 변수 z가 선언되고 30이 저장됨 따로 선언을 하지 않아서?. 호이스팅
+            if(y==20){
+                let b = 40;  // if 블록에서만 사용되는 블록 변수 b 선언
+                b++;
+                document.write("if 블록 내 블록변수 b ="+b+"<br>");
+            }
+            //document.write(b)
+            // 이곳에서는 블록 변수 b에 접근할 수 없음
+        } // 이곳에서는 변수 x, y, z에 모두 접근 가능
+        document.write("함수 f()내 지역변수 y="+y+"<br>")
+        f(); // 함수 f() 호출 
+        document.write("전역변수 x="+x+"<br>");
+        document.write("전역변수z="+z);
+        //document.write(y)
+        // 이곳에서는 변수 x와 z만 접근 가능, 지역 변수 y와 블록 변수 b는 접근 불가
+    </script>
+</body>
+</html>

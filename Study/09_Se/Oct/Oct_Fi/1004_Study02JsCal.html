@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let bin= 0b11; // 0b 2진수
+        let oct = 0o15;  //0->8진수  015는 8진수. 10진수로 13
+        let hex = 0x15; // 0x-> 16진수. 10진수로 21
+        let condition = true; // True로 하면 안됨
+          //  "<br>" -> "" 있어야 인식 
+        document.write("8진수 015는 십진수로"+oct+"<br>")
+        document.write("16진수 0x15는 십진수로"+hex+"<br>")
+        document.write("condition은"+condition+"<br>")
+        document.write('문자열: 단일인용부호로도 표현'+"<br>")
+        document.write("그녀는 \"누구세요\"라고 했습니다"+"<br>")
+        let x = 32;
+        let total= 100+x*2/4-3;
+        let div=x/10;
+        let mod = x%2;
+        document.write("x:"+x+"<br><br>")
+        document.write("100+x*2/4-3 = "+total+"<br>")
+        document.write("x/10="+div+"<br>")
+        document.write("x%2=" +mod+"<br>")
+
+        let a=3, b=3, c=3;
+        document.write("a="+a+"b="+b);
+        document.write(",c="+c+"<br><br>")
+
+        a+= 3;
+        b*= 3;
+        c%= 2;
+
+        document.write("a+=3; 실행 후 , a="+a+"<br>");
+        document.write("b*=3; 실행 후 , b="+b+"<br>");
+        document.write("c%=2; 실행 후 , c="+c+"<br>");
+        
+        let i=13, j=7;
+        document.write("i="+i+",j="+j+"<br><br>");
+        document.write("i==j"+(i==j)+"<br>");
+        document.write("i!=j"+(i!=j)+"<br>");
+        document.write("i>=j"+(i>=j)+"<br>");
+        document.write("i>j"+(i>j)+"<br>");
+        document.write("i<=j"+(i<=j)+"<br>");
+        document.write("i < j :"+(i<j)+"<br>");
+
+        let t=true, f=false;
+        document.write("t="+t+"f="+f+"<br><br>");
+        document.write("t&&f:"+ (t&&f)+"<br>");
+        document.write("t||f:"+ (t||f)+"<br>");
+        document.write("!t:"+ (!t)+"<br>");
+        document.write("<hr>");
+        document.write("(3>2)&&(3<4:)"+((3>2)&&(3<4))+"<br>");
+        document.write("(3==-2)||(3<4:)"+((3==-2)||(3<4))+"<br>");
+        
+        let n=3, m=5;
+        document.write("n="+n+",m="+m+"<br><br>");
+        document.write("두수의 차이:"+((n>m)?(n-m):(n-m)));
+    </script>
+    
+</body>
+</html>
