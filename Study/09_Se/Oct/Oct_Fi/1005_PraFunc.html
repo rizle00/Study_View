@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+    function add(a,b){
+        let sum = 0;
+        for(let i = a; i<b; i++){
+            sum+=i;
+        } 
+        
+        console.log(sum);
+        return sum;
+        
+    }
+    
+    console.log("func : " + add(3,10));
+    function get(){
+    numc=document.getElementById("c").value;
+    numd=document.getElementById("d").value;}
+    function mul(numc,numd){
+     let re= numc*numd;
+     document.getElementById("res").innerHTML =re; 
+    }
+    
+</script>
+<body>
+    <input type="text" placeholder="숫자" id="c" onkeyup="get()" >
+    <input type="text" placeholder="숫자" id="d" onkeyup="get()">
+    <input type="button" value="곱하기" onclick="mul(3,5)">
+    <div id="res"></div>
+</body>
+</html>

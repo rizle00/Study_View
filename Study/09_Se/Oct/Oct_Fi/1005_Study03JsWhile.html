@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       let sum2 = 0;
+       for(let k=1; k<=10; k++){
+        if(k%3!=1)
+        continue;
+    document.write(k+"/");
+    sum2 += k;
+       }
+       document.write("합은"+sum2+"<br>")
+
+        let j = 0, sum1 = 0;
+        while(true){
+            sum1+=j;
+            if(sum1>3000)
+            break;
+        j++
+        }
+        document.write(j+"까지 더하면 3000을 넘음 :"+sum1+"<br>")
+        </script>
+        <script>
+            let n = prompt("0보다 큰 정수를 입력하세요",0);
+            n =  parseInt(n);
+        
+            let i = 0, sum = 0;
+            do{
+                sum+=i;
+                i++;
+            } while(i<=n);
+            document.write("0에서"+n+"까지 합은"+sum);
+        </script>
+    
+</body>
+</html>

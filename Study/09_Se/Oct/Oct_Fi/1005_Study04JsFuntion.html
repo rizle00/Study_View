@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function adder(a,b){
+            let add;
+            add = a+b;
+            return add;
+        }
+        function sumer(c,d){
+            let sum;
+            let i =0;
+           for(i=c; i<=d; i++){
+            sum+=i;
+           } document.write(sum);
+        }
+        function multiple(x){
+            function fn(y){
+                return x*y;
+            } return fn;
+        }
+        var triple = multiple(5);
+        document.write(triple(5));
+        function add (e,f){
+            let add1;
+            add1=e+f;
+            return add1;
+        }
+        function minu (e,f){
+            let minu = e-f;
+            return minu;
+        }
+        function mul (e,f){
+            let mul = e*f;
+               document.getElementById("result").innerHTML = mul;
+        }
+    </script>
+</head>
+<body>
+    <script>
+        let n = adder(24567, 98374);
+        function print(){
+            document.write("24567 + 98374 는"+n+"<br>");
+        }
+    
+      sumer(5,10);
+    </script>
+    <input type="button" value="+" onclick="print()">
+    <button type="button" onclick="n.innerHTML">+</button>
+    <input type="button" value="add" onclick="document.write(add(3,5))">
+    <input type="button" value="minu" onclick="minu(7,8)">
+    <input type="button" value="mul" onclick="mul(2,9)">
+    <div id="result"></div>
+</body>
+</html>
