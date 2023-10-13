@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="rect"></div>
+    <script>
+       var myRect = document.getElementById("rect");
+        myRect.addEventListener("mouseover", function(){
+            myRect.style.backgroundColor ="green";
+            myRect.style.borderRadius = "50%";
+        })
+        myRect.addEventListener("mouseout", function(){
+            myRect.style.backgroundColor ="";
+            myRect.style.borderRadius = "";
+        })
+       
+    </script>
+</body>
+</html>

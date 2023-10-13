@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onfocus와 onblur</title>
+    <script>
+        function checkFilled(obj){
+            if(obj.value==""){
+                let msg = document.getElementById("alert")
+                msg.innerHTML ="<font color = 'red'>"+"이름은 필수 입력 입니다."+"</font>";
+                obj.focus();
+            }
+        }
+    </script>
+</head>
+<body onload="document.getElementById('name').focus();">
+    <!-- 이름 입력창에 커서를 위치 -->
+    <h3>onfocus와 onblur</h3>
+    <hr>
+    <p>
+        이름을 입력하지 않고 다른 창으로 이동할 수 없습니다.
+    
+    <form >
+        이름 <input type="text" id="name"
+        onblur="checkFilled(this)" style="display: inline;" >
+        <div id="alert" style="display: inline;"></div>
+        <p>
+            학번 <input type="text">
+    </form>
+    
+</body>
+</html>
