@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+</head>
+<body>
+    <a href="http://w3schools.com">site link A</a><br>
+    <a href="http://w3schools.com">site link B</a><br>
+    <a href="http://w3schools.com" target="_blank">site link C</a><br>
+    <button id="link">del link</button>
+    <button id="link2">target = _blank</button>
+    <button id="link3">target != _blank</button>
+    <button id="btn">control btn</button>
+    
+    <table border="1">
+    <tr>
+        <th>name</th>
+        <th>birth</th>
+    </tr>
+    <tr>
+        <td>kildong</td>
+        <td>2015-00-00</td>
+    </tr>
+    <tr>
+        <td>lee</td>
+        <td>2015-00-00</td>
+    </tr>
+    <tr>
+        <td>park</td>
+        <td>2015-00-00</td>
+    </tr>
+    <tr>
+        <td>hong</td>
+        <td>2015-00-00</td>
+    </tr>
+    <tr>
+        <td>jung</td>
+        <td>2015-00-00</td>
+    </tr>
+</table>
+<button id="odd">choice odd</button>
+<button id="even">choice even</button>
+
+</body>
+<script>
+    function turnBack(){
+        setTimeout(function(){
+            $("*").show();
+            $("script").hide();
+        } , 1000);
+    }
+
+    $("#link").click(function(){
+        $("[href]").hide();
+        turnBack();
+    });
+
+    $("#link2").click(function(){
+        $("a[target='_blank']").hide();
+        turnBack();
+    });
+    $("#link3").click(function(){
+        $("a[target!='_blank']").hide();
+        turnBack();
+    });
+    $("#btn").click(function(){
+        $(":button").text("텍스트 변경")
+    });
+    $("#odd").click(function(){
+        $("tr:odd").css("background-color","#EDE8E8");
+        $("tr:even").css("background-color","white");
+    })
+    $("#even").click(function(){
+        $("tr:odd").css("background-color","white");
+        $("tr:even").css("background-color","#DCFFDE");
+    })
+</script>
+</html>
