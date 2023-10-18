@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <style>
+        div{
+            padding: 5px;
+            text-align: center;
+            background-color: #e5eecc;
+            border: solid 1px #c3c3c3;
+        }
+        .panel{
+            padding: 50px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="flip">click, menu down</div>
+    <div class="panel" id="p1">subMenu</div>
+    <div id="flip2">toggle Menu</div>
+    <div class="panel" id="p2">subMenu</div>
+</body>
+<script>
+    $("#flip").click(function(){
+        var vision = $("#p1").css("display"); //  display value 가져오기
+        if(vision=="none"){
+            $("#p1").slideDown("slow",function(){
+                $("#flip").text("click , menu up");
+            });
+        } else {
+            $("#p1").slideUp("slow",function(){
+                $("#flip").text("click , menu down");
+            });
+        }
+    });
+
+    $("#flip2").click(function(){
+        $("#p2").slideToggle("fast", function(){
+
+            var vision = $("#p2").css("display");
+            console.log(vision);
+        if(vision=="none"){           
+                $("#flip2").text("toggle down");
+            }  else {
+            $("#flip2").text("toggle up");
+            }
+        });
+    });
+    
+</script>
+</html>

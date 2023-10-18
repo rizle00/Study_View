@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=devwce-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <style>
+        div{
+            width: 80px;
+            height: 80px;
+            display: none;
+        }
+    </style>
+</head>
+<img>
+    <button id="visible">Fade In</button>
+    <button id="invisible">Fade Out</button>
+    <button id="onOff">Fade Toggle</button>
+    <img src="btn.png" width="50px" height="50px" alt="버튼"></img>
+    <div style="background-color: red;"></div>
+    <div style="background-color: green;"></div>
+    <div style="background-color: blue;"></div>
+    
+</body>
+<script>
+    $("button").click(function(){
+        var txt = $(this).text();
+        console.log(txt);
+    });
+
+    $("#visible").click(function(){
+        $("div").first().fadeIn("fast", function(){
+            $(this).next("div").fadeIn("fast");
+        });
+    });
+
+    $("#invisible").click(function(){
+        $("div").first().fadeOut("slow", function showNext(){
+            $(this).next("div").fadeOut("slow", showNext);
+        }); //  재귀호출, 함수 내부에서 함수가 자기 자신을 또다시 호출
+    });
+
+    $("#onOff").click(function(){
+        $("div").first().fadeToggle("slow", function showNext(){
+            $(this).next("div").fadeToggle("slow", showNext);
+        });
+    });
+
+    $("img").hover(function(){
+        $("img").fadeTo("slow", 0.15, function(){ // percent
+            $("img").attr("src", "btn2.png");            
+        });
+    }, function(){
+        $("img").fadeTo("slow", 1, function(){
+            $("img").attr("src", "btn.png");            
+        });
+    })
+</script>
+</html>

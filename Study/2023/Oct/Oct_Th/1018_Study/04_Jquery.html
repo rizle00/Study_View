@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>엘리먼트 가져오기</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+</head>
+<body>
+    <input type="text" value="some text"/>
+    <p>문자가 쓰여진<b>강조된</b>영역</p>
+    <span id="txt"></span>
+    <span id="html"></span>
+    <fieldset>
+        <legend> 숫자 입력</legend>
+        Range(0~100) :
+        <input type="range" name="" id="point" min="0" max="100" value="30" step="1">
+        당신이 선택한 값:
+        <span id="msg"></span>
+        <br>
+        <button id="inc">++</button>
+        <button id="dec">--</button>
+    </fieldset>
+    <fieldset>
+        <legend>라디오 버튼</legend>
+        <div>
+            <input type="radio" name="front" id="" value="HTML"/>
+            HTML
+        </div>
+        <div>
+            <input type="radio" name="front" id="" value="CSS"/>
+            CSS
+        </div>
+        <div>
+            <input type="radio" name="front" id="" value="JS"/>
+            JS
+        </div> 
+        <span id="selected">no selected</span>
+       </fieldset>
+</body>
+<script>
+    var radio = $(":radio");
+    console.log(radio);
+    $(radio).click(function(){
+        var val = $(this).val()
+        $("#selected").html("당신의 선택 값 :"+val)
+    });
+
+    var i = $("#point").val(); //  value  가져오기
+
+    $("#inc").click(function(){
+        i++;
+        $("#point").val(i); // value 대입하기
+        $("#msg").html(i);
+    });
+
+    $("#dec").click(function(){
+        i--;
+        $("#point").val(i);
+        $("#msg").html(i);
+    });
+
+    $("#point").change(function(){ // 바꿧을때 value 값
+       var val = $(this).val();
+       i = val;
+       console.log(val);        
+        $("#msg").html(val);
+    });
+
+    var txt = $("p").text();
+    var html = $("p").html();
+    console.log(txt);
+    console.log(html);
+    $("#txt").text("<h1>HTML 과 TEXT 차이 <h1>")
+    $("#html").html("<h1>HTML 과 TEXT 차이 <h1>")
+
+    var attr = $("input").attr("type"); // 가져오기
+    var val = $("input").val();
+    console.log(attr);
+    console.log(val);
+     $("input:text").attr("type", "password");// 대입하기
+</script>
+</html>
