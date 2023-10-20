@@ -4,85 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-          html, body {
-     height: 100%;
-     margin: 0px;
-     padding: 0px;
-        }
-        .header{
-            
-            background-color: #3557D5;
-            margin: 0px;
-            height: 10%;
-            width: 100%;
-            display: block;
-            text-align: center;
-            line-height: 150%;
-            font-weight: 900;
-            font-size: 30px;        
-            color: #C4DDFB;
-            padding: 1% 0 1% 0;
-           
-        }
-        .nav{
-            background-color: #8F8BE6;
-            color: #C4DDFB;
-            margin: 0px;
-            width: 100%;
-            height: 10%;
-            display: block;
-        }
-        .section{
-            background-color: #E5E5E5;
-            color: black;
-            margin: 0px;
-            width: 100%;
-            height: 60%;
-            display: block;
-        }
-        .footer{
-            background-color: #3665B5;
-            color: #C4DDFB;
-            margin: 0px;
-            width: 100%;
-            height: 15%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            /* text-align: center; */
-            font-weight: bolder;
-           
-            /* line-height: 80px; */
-            
-        }
-        div{
-            float: left;
-            color: #C4DDFB;
-            display: block;
-        }
-        #title{
-            width: 100%;
-            height: 15%;
-            color: black;
-            text-align:center;
-            font-weight: 900;
-        }
-        
-      
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="header">쇼핑몰 회원관리 ver 1.0</div>
     <div class="nav">
-        <div class="menu" id="signUp">회원등록</div>
+        <div class="menu" id="signUp"><a href="signUp.html">회원등록</a></div>
         <div class="menu" id="refer">회원목록 조회/수정</div>
         <div class="menu" id="check">회원매출조회</div>
         <div class="menu" id="home">홈으로.</div>
     </div>
     <div class="section">
          <div id="title">  쇼핑몰 회원관리 프로그램</div> 
-        쇼핑몰 회원 정보와 회원 매출정보 ....
+        쇼핑몰 회원 정보와 회원 매출정보 .... <br> 
         프로그램 작성 순서
         <ol type="1">
             <li>회원정보 테이블을 생성한다</li>
